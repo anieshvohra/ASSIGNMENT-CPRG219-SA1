@@ -1,0 +1,25 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f4f4f9;
+    background-color: #1b1f23;
+}
+/* Navbar */
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-list a {
+    color: #ddd;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #50fa7b;
+}
