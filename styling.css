@@ -36,3 +36,33 @@ body {
     color: #50fa7b;
     transform: translateY(-2px); /* Subtle hover effect */
 }
+
+
+
+/* -----------------------------------------------------
+   Responsive Design (Mobile First)
+   ----------------------------------------------------- */
+
+   @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem; /* Reduced padding for smaller screens */
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center; /* Centers items on smaller screens */
+    }
+    
+    section {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+
+    .bio-section img {
+        width: 120px; /* Smaller profile image on mobile */
+        height: 120px;
+    }
+}
