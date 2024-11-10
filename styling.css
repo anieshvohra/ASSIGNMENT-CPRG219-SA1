@@ -66,3 +66,49 @@ body {
         height: 120px;
     }
 }
+/* -----------------------------------------------------
+   Section Styling
+   ----------------------------------------------------- */
+
+section {
+    padding: 2rem;
+    margin: 1rem;
+    background-color: #2c2f33;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+h2 {
+    font-size: 2em;
+    color: #50fa7b;
+    margin-bottom: 1rem; /* Adds spacing for readability */
+    text-transform: uppercase; /* Makes headings stand out */
+    letter-spacing: 1px;
+}
+
+/* -----------------------------------------------------
+   Biography Section
+   ----------------------------------------------------- */
+
+.bio-section {
+    background-color: #23272a;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Adds depth */
+}
+
+.bio-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image stays in a circle */
+    margin: 1rem 0;
+}
+
+.bio-section figcaption {
+    font-size: 0.9em;
+    color: #bbb;
+    margin-top: 0.5rem;
+    font-style: italic; /* Adds emphasis to the caption */
+}
