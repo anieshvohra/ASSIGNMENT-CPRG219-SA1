@@ -311,16 +311,93 @@ td {
     }
 }
 table {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    /* 
+  Ensures that the table is scrollable horizontally on small screens where it might overflow.
+  This is important for making tables responsive on mobile devices.
+*/
+    display: block; /* Makes the table a block-level element so it can be scrolled */
+    overflow-x: auto; /* Enables horizontal scrolling if the table exceeds the container's width */
+    -webkit-overflow-scrolling: touch; /* Adds smooth scrolling behavior on touch devices (e.g., mobile devices) */
+}
 }
 
 table th, table td {
-    padding: 0.8rem;
+    /* 
+  Adds padding inside each table cell (both header <th> and data <td>) to improve readability
+  and ensure that text or content inside the cells isn't touching the borders directly.
+*/
+    padding: 0.8rem; /* Adds 0.8rem padding around the content inside table cells */
 }
 }
 .contact-list a:hover {
-    color: #ffffff;             /* White on hover */
-    text-decoration: underline;
+    /* 
+  On hover, changes the link color to white and adds an underline to indicate interaction.
+  This is a visual effect that makes links stand out when hovered over by the user.
+*/
+    color: #ffffff; /* Changes the text color to white when hovered */            /* White on hover */
+    text-decoration: underline; /* Adds an underline to the link on hover to show interactivity */
 }
+
+ul{
+    /* 
+  Removes the default list bullet points and extra padding/margins from list items.
+  The `overflow: hidden` ensures no content overflows beyond the boundaries of the container.
+*/
+    list-style-type: none; /* Removes the default bullet points from list items */
+margin: 5rem; /* Adds 5rem of space around the list */
+padding:0px;    /* Removes the default padding inside the list */
+overflow: hidden; /* Ensures no child elements overflow the container's boundaries */
+}
+.nav{
+    /* 
+  Sets the layout style of the navigation menu. 'display: ruby' is an unusual CSS property,
+  which might be a mistake or could be trying to use a Ruby rendering mode. Consider changing this 
+  to 'display: flex' for more common and reliable layout control.
+*/
+    display: ruby;  /* Unusual CSS property - might be a typo or a mistake. Consider using 'flex' or 'block' */
+    
+}
+#main{
+    /* 
+  Adds spacing around the #main element with 5rem margin and 1rem padding inside the element. 
+  This ensures that there is sufficient space between the content and the surrounding elements.
+*/
+    margin: 5rem; /* Adds 5rem of margin around the #main element */
+    padding: 1rem; /* Adds 1rem of padding inside the #main element */
+    
+}
+a:hover{
+    /* 
+  Defines a hover effect for links. When a link is hovered, its background color changes to 'aquamarine'
+  and its font size is increased to 20px, giving the user a visual feedback.
+*/
+    background-color: aquamarine; /* Changes the background color of the link when hovered */
+    font-size: 20px; /* Increases the font size to 20px when hovered */
+}
+img{
+    /* 
+  Resizes the images to a fixed height of 500px, maintaining their aspect ratio by setting the width to 'auto'.
+  This is useful to make sure the images fit a specific height without distortion.
+*/
+    height: 500px; /* Sets the height of the image to 500px */
+    width: auto; /* Maintains the aspect ratio of the image by automatically adjusting the width */
+} 
+/* 
+  Resizes the images to a fixed height of 200px (this rule seems to override the previous one).
+  The width remains auto to preserve the aspect ratio.
+*/
+img{
+    height: 200px; /* Sets the height of the image to 200px (note: this overwrites the previous 500px setting) */
+    width: auto; /* Maintains the aspect ratio of the image */
+}
+/* 
+  Applies a red border to the entire table, as well as the table headers (<th>) and table data cells (<td>).
+  This helps visually separate each cell in the table.
+*/
+table, th,td{
+border: 1px solid red; /* Adds a 1px solid red border around the table, header, and data cells */
+}
+
+
+
+   
