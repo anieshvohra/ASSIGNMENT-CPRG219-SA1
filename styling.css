@@ -14,78 +14,29 @@
 */
 body {
     font-family:  'Roboto',Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    
     color: #f4f4f9;
     background-color: #1b1f23;
     line-height: 1.6; /* Improves readability */
 }
 /* Navbar */
-.navbar {
+.nav {
     background-color: #333; 
     /* Dark background to make text stand out */
     color: #fff;
-    display: flex;  /* Using Flexbox for a horizontal layout and even spacing */
+    display: ruby  /* Using Flexbox for a horizontal layout and even spacing */
     justify-content: space-between;
-    align-items: center;
-    /* Padding gives space around items inside navbar */
-    padding: 1rem 2rem;
+    align-items:center;
+  
     /* Adds a soft shadow under the navbar */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
 }
-
-.nav-list {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-list a {
-    color: #ddd;
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 0.5px; /* Adds a professional touch */
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.nav-list a:hover {
-    /* Hover effect: changes color and moves link up slightly */
-    color: #50fa7b;
-    transform: translateY(-2px); /* Subtle and small hover effect */
+.nav li{
+    margin left: 10rem;
 }
 
 
-
-/* -----------------------------------------------------
-   Responsive Design (Mobile First) - Tablet and Mobile (max-width: 768px)
-   Adjusts layout for screens smaller than 768px, stacking
-   items vertically so they fit better on mobile.
-   ----------------------------------------------------- */
-
-   @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center;
-        padding: 1rem; /* Reduced padding for smaller screens */
-    }
-    
-    .nav-list {
-        /* Stacks navbar items vertically on small screens */
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center; /* Centers items on smaller screens */
-    }
-    
-    section {
-        padding: 1rem;
-        margin: 0.5rem;
-    }
-
-    .bio-section img {
-        width: 120px; /* Smaller profile image on mobile */
-        height: 120px;
-    }
-}
+ 
 /* -----------------------------------------------------
    Floating Contact Card Styling
    ----------------------------------------------------- */
@@ -114,7 +65,10 @@ section {
     margin-bottom: 100px; /* Add enough margin to the bottom of the section */
 }
 
-/* Adjust mobile view for floating contact card */
+/*  Responsive Design (Mobile First) - Tablet and Mobile (max-width: 768px)
+   Adjusts layout for screens smaller than 768px, stacking
+   items vertically so they fit better on mobile.
+ Adjust mobile view for floating contact card */
 @media (max-width: 768px) {
     .contact-card {
         bottom: 40px; /* Reduce distance from bottom on smaller screens */
@@ -179,7 +133,11 @@ section {
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 text-align: center; /* Center the text for the section */
+max-width: 100%;  /* Ensure sections are responsive */
+    width: 100%;  /* Full width of the container */
+    box-sizing: border-box; /* Make sure padding doesn't overflow */
 }
+
 
 h2 {
     font-size: 2em;
@@ -187,37 +145,10 @@ h2 {
     margin-bottom: 1rem; /* Adds spacing for readability */
     text-transform: uppercase; /* Makes headings stand out */
     letter-spacing: 1px;
+    text-align: center; /* Center align headings */
 }
 
-/* -----------------------------------------------------
-   Biography Section
-   ----------------------------------------------------- */
 
-.bio-section {
-    background-color: #23272a;
-    text-align: center; /* Centers content within the bio section */
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Adds depth */
-    max-width: 600px;  /* Sets a max width to prevent the bio from stretching too wide */
-    margin: 0 auto;  /* Centers the bio section on the page */
-
-}
-
-.bio-section img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover; /* Ensures the image stays in a circle */
-    margin: 1rem 0;
-}
-
-.bio-section figcaption {
-    font-size: 0.9em;
-    color: #bbb;
-    margin-top: 0.5rem;
-    font-style: italic; /* Adds emphasis to the caption */
-}
 /* -----------------------------------------------------
    Project Table
    ----------------------------------------------------- */
@@ -296,7 +227,7 @@ td {
         padding: 1rem; /* Reduced padding for smaller screens */
     }
     
-    .nav-list {
+    .nav {
         /* Navbar List: Changes to a vertical stack with more space between items */
         flex-direction: column; /* Stack navbar items vertically */
         gap: 1rem; /* Adds space between navbar items */
@@ -309,10 +240,7 @@ td {
         margin: 0.5rem; /* Adds a little margin for spacing */
     }
 
-    .bio-section img {
-        width: 120px; /* Smaller profile image on mobile */
-        height: 120px; /* Keep aspect ratio */
-    }
+    
 }
 table {
     /* 
@@ -332,7 +260,7 @@ table th, table td {
 */
     padding: 0.8rem; /* Adds 0.8rem padding around the content inside table cells */
 }
-}
+
 .contact-list a:hover {
     /* 
   On hover, changes the link color to white and adds an underline to indicate interaction.
@@ -365,7 +293,7 @@ overflow: hidden; /* Ensures no child elements overflow the container's boundari
   Adds spacing around the #main element with 5rem margin and 1rem padding inside the element. 
   This ensures that there is sufficient space between the content and the surrounding elements.
 */
-    margin: 5rem; /* Adds 5rem of margin around the #main element */
+    margin-left: 2rem; /* Adds 5rem of margin around the #main element */
     padding: 1rem; /* Adds 1rem of padding inside the #main element */
     
 }
@@ -396,6 +324,24 @@ img{
 table, th,td{
 border: 1px solid red; /* Adds a 1px solid red border around the table, header, and data cells */
 }
+/* Ensure visibility of headings and sections on mobile */
+@media (max-width: 768px) {
+    /* Adjust padding and font size for mobile screens */
+    section {
+        padding: 1rem;  /* Reduce padding */
+        margin: 0.5rem;  /* Reduce margin */
+    }
+
+    section h2 {
+        font-size: 1.5rem;  /* Reduce font size for mobile */
+    }
+
+    
+
+
+   
+
+  
 
 
 
