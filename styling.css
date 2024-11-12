@@ -178,6 +178,7 @@ section {
     background-color: #2c2f33;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+text-align: center; /* Center the text for the section */
 }
 
 h2 {
@@ -194,10 +195,13 @@ h2 {
 
 .bio-section {
     background-color: #23272a;
-    text-align: center;
+    text-align: center; /* Centers content within the bio section */
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Adds depth */
+    max-width: 600px;  /* Sets a max width to prevent the bio from stretching too wide */
+    margin: 0 auto;  /* Centers the bio section on the page */
+
 }
 
 .bio-section img {
@@ -354,8 +358,7 @@ overflow: hidden; /* Ensures no child elements overflow the container's boundari
   which might be a mistake or could be trying to use a Ruby rendering mode. Consider changing this 
   to 'display: flex' for more common and reliable layout control.
 */
-    display: ruby;  /* Unusual CSS property - might be a typo or a mistake. Consider using 'flex' or 'block' */
-    
+    display: flex;  
 }
 #main{
     /* 
@@ -386,10 +389,6 @@ img{
   Resizes the images to a fixed height of 200px (this rule seems to override the previous one).
   The width remains auto to preserve the aspect ratio.
 */
-img{
-    height: 200px; /* Sets the height of the image to 200px (note: this overwrites the previous 500px setting) */
-    width: auto; /* Maintains the aspect ratio of the image */
-}
 /* 
   Applies a red border to the entire table, as well as the table headers (<th>) and table data cells (<td>).
   This helps visually separate each cell in the table.
