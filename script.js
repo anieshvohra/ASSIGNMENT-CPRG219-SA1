@@ -36,3 +36,11 @@ greetingDiv.className = greetingClass;
 const footer = document.getElementById("footer");
 const year = new Date().getFullYear();
 footer.innerHTML = `&copy; Aniesh Vohra, ${year}`;
+// **Loop-Generated List**
+const numberList = document.getElementById("numbers");
+
+for (let i = 1; i <= 12; i++) {
+    const listItem = document.createElement("li");
+    listItem.textContent = i % 2 === 0 ? "Even" : "Odd";
+    numberList.appendChild(listItem);
+}
