@@ -354,6 +354,16 @@ border: 1px solid red; /* Adds a 1px solid red border around the table, header, 
     text-align: center;
     padding: 10px;
 }
+#button-box {
+    background-color: hsl(0, 100%, 50%); /* Red box */
+    border: 2px solid #cc0000; /* Darker red border */
+    border-radius: 50px; /* Optional rounded corners */
+    padding: 10px; /* Inner spacing */
+    display: inline-block; /* Fit the size of the button */
+    margin: 20px; /* Space around the box */
+    text-align: center; /* Center the button */
+}
+
 /* Button hover style */
 #btn-alert {
     padding: 10px 20px;
@@ -361,10 +371,11 @@ border: 1px solid red; /* Adds a 1px solid red border around the table, header, 
     cursor: pointer;
 }
 #btn-alert:hover {
-    background-color: #ddd;
-    color: #333;
+    background-color: #8a8ff1; /* Gray background on hover */
 }
-    
+
+
+
 
 
    
