@@ -21,6 +21,15 @@ const alertButton = document.getElementById("btn-alert");
 alertButton.addEventListener("click", () => {
     alert("Hello world! Welcome to my page. This webpage is all dedicated about me, know more about me by clicking on 'OK' and then 'BACKGROUND INFORMATION' above. ");
 });
+// Change button text on hover
+alertButton.addEventListener("mouseover", () => {
+    alertButton.textContent = "Now Click";
+});
+
+// Restore button text on mouse out
+alertButton.addEventListener("mouseout", () => {
+    alertButton.textContent = "Click Me";
+});
 greetingDiv.textContent = greetingMessage;
 greetingDiv.className = greetingClass;
 // **Footer: Display Current Year**
