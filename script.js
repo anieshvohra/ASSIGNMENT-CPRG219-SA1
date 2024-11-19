@@ -17,3 +17,7 @@ if (hour < 12) {
 
 greetingDiv.textContent = greetingMessage;
 greetingDiv.className = greetingClass;
+// **Footer: Display Current Year**
+const footer = document.getElementById("footer");
+const year = new Date().getFullYear();
+footer.innerHTML = `&copy; Aniesh Vohra, ${year}`;
